@@ -31,7 +31,7 @@ module.exports = function(req, res) {
 			loanResponse.monthrepayment = data.response.quote / 100;
 			loanResponse.apr = parseFloat(data.response.APR) * 100;
 			loanResponse.interests = core.business.interest(amount, loanResponse.monthrepayment, data.response.months, loanResponse.apr);
-			loanResponse.month = data.response.months;
+			//loanResponse.month = data.response.months;
 
 			core.events.loanEvents.emit('fv-loan', loanResponse);
 			next();
@@ -50,7 +50,7 @@ module.exports = function(req, res) {
 				var loanResponse = initResponse('creditbureau');
 				loanResponse.monthrepayment = data.interests['monthly repayments'] / exchange;
 				loanResponse.apr = parseFloat(data.interests['annual percentage rate']);
-				loanResponse.month = data.period;
+				//loanResponse.month = data.period;
 
 				loanResponse.interests = core.business.interest(amount, loanResponse.monthrepayment, data.period, loanResponse.apr);
 

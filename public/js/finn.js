@@ -12,7 +12,7 @@ $(document).ready(function() {
 			loanResults.append('<li>APR: ' + _.round(data.apr, 2) + '%</li>');
 			loanResults.append('<li>Monthly repayments: ' + _.round(data.monthrepayment, 2) + '€</li>');
 			loanResults.append('<li>Total interests to be paid: ' + _.round(data.interests, 2) + '€</li>');
-			loanResults.append('<li>Month: ' + _.round(data.month, 2) + '</li>');
+			//loanResults.append('<li>Month: ' + _.round(data.month, 2) + '</li>');
 			loanResults.append('</ul>');
 			loanResults.append('<hr/>');
 		}
