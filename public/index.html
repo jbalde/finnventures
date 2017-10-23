@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Hello, world!</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<h1>Call Loans</h1>
+					<form id="loan-form" onsubmit="javascript:return false;">
+						<label for="fv-name">Name</label>
+						<input type="text" class="form-control" id="fv-name" placeholder="Name" required>
+						<label for="fv-product">Product to purchase</label>
+						<input type="text" class="form-control" id="fv-product" placeholder="Product to purchase" required>
+						<label for="fv-amount">Amount</label>
+						<div class="input-group mb-2 mb-sm-0">
+							<input type="number" class="form-control" id="fv-amount" placeholder="amount in euros" required>
+							<div class="input-group-addon">€</div>
+						</div>
+						<small>Use a math notation 0,000.00. You can ignore coma using 00000.00</small>
+						<br/>
+						<button id="loan-call" class="btn btn-primary">Call</button>
+						<button id="loan-clear" class="btn btn-primary">Clear</button>
+					</form>
+				</div>
+				<div class="col-6" id="loan-results"></div>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js" crossorigin="anonymous"></script>
+
+
+		<script src="/js/jquery.sse.min.js"></script>
+		<script src="/js/finn.js"></script>
+	</body>
+</html>
